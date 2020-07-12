@@ -1,4 +1,5 @@
-from webapp import create_app, DevelopmentConfig
+from webapp import create_app
+from webapp.config import DevelopmentConfig
 
 app = create_app(configuration=DevelopmentConfig)
 
