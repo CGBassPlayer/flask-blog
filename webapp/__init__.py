@@ -16,6 +16,8 @@ mail = Mail()
 
 def create_app(configuration=ProductionConfig):
   app = Flask(__name__)
+  app.jinja_env.trim_blocks = True
+  app.jinja_env.lstrip_blocks = True
   app.config.from_object(configuration)
 
   db.init_app(app)

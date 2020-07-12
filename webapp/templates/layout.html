@@ -10,9 +10,10 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     {% if title %}
-        <title>Flask Blog - {{ title }}</title>
+        <title>{{ title }} - Flask Blog</title>
     {% else %}
         <title>Flask Blog</title>
     {% endif %}
