@@ -1,4 +1,5 @@
 from flask import render_template, request, Blueprint
+from loguru import logger
 
 from webapp.models import Post
 
@@ -15,4 +16,5 @@ def index():
 
 @main.route("/about")
 def about():
+    logger.debug("Loading About page")
     return render_template('main/about.html.j2', title='About')

@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
+flask = "3.1.1"
 flask_sqlalchemy = "*"
 flask_wtf = "*"
 email_validator = "*"
@@ -15,6 +15,7 @@ flask_login = "*"
 flask_mail = "*"
 itsdangerous = "*"
 Pillow = "*"
+loguru = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.9"

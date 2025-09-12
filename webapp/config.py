@@ -1,9 +1,15 @@
 import os
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'nzKEV_6DH2HQsmMb6wj-zw'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+    HUMAN_LOGFILE = os.path.join('logs/flask.log')
+    MACHINE_LOGFILE = os.path.join('logs/ingest/flask.json.log')
+    LOG_BACKTRACE = False
+    LOG_LEVEL = 'INFO'
 
 
 class ProductionConfig(Config):
@@ -34,3 +40,5 @@ class DevelopmentConfig(Config):
     TEMPLATE_AUTO_RELOAD = True
     """ SQLITE DEVELOPMENT FILE """
     SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
+    LOG_BACKTRACE = True
+    LOG_LEVEL = 'DEBUG'
